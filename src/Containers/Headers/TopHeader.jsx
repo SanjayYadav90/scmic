@@ -1,30 +1,33 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 function TopHeader() {
   return (
     <header>	
-      <nav classname="mnu navbar-light">
-        <div classname="logo" id="logo">
-          <h1><a href="index.html">Indoctrination</a></h1>
+      <nav className="mnu navbar-light">
+        <div className="logo" id="logo">
+          <h1><Link to="index.html">Indoctrination</Link></h1>
         </div>
-        <label htmlfor="drop" classname="toggle"><span classname="fa fa-bars" /></label>
+        <label htmlfor="drop" className="toggle"><span className="fa fa-bars" /></label>
         <input type="checkbox" id="drop" />
-        <ul classname="menu">
-          <li classname="mr-lg-4 mr-3 active"><a href="index.html">Home</a></li>
-          <li classname="mr-lg-4 mr-3"><a href="about.html">About</a></li>
-          <li classname="mr-lg-4 mr-3"><a href="services.html">Services</a></li>
-          <li classname="mr-lg-4 mr-3">
-            <label htmlfor="drop-2" classname="toggle">Drop Down <span classname="fa fa-angle-down" aria-hidden="true"> </span></label>
-            <a href="#">Dropdown <span classname="fa fa-angle-down" aria-hidden="true" /></a>
-            <input type="checkbox" id="drop-2" />
+        <ul className="menu">
+          <li className="mr-lg-4 mr-3 active"><Link to="index.html">Home</Link></li>
+          <li className="mr-lg-4 mr-3"><Link to="about.html">About</Link></li>
+          <li className="mr-lg-4 mr-3"><Link to="services.html">Services</Link></li>
+          <li className="mr-lg-4 mr-3">
+            <label htmlfor="drop-2" className="toggle">Drop Down <span className="fa fa-angle-down" aria-hidden="true"> </span></label>
+              <Link to="#">Dropdown <span className="fa fa-angle-down" aria-hidden="true" /></Link>
+              <input type="checkbox" id="drop-2" />
             <ul>
-              <li><a href="typo.html">Typography</a>
+              <li>
+                <Link to="typo.html">Typography</Link>
               </li>
-              <li><a href="gallery.html">Gallery</a>
+              <li>
+                <Link to="gallery.html">Gallery</Link>
               </li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><Link to="contact.html">Contact</Link></li>
         </ul>
       </nav>
     </header>
